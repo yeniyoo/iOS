@@ -6,6 +6,7 @@ target 'Round' do
   use_frameworks!
 
   # Pods for Round
+pod 'Alamofire', '~> 3.4'
 
   target 'RoundTests' do
     inherit! :search_paths

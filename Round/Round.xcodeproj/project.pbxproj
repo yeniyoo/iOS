@@ -101,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7823611A1D477F220064BE08 /* RoundHTTPHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RoundHTTPHelper;
+			sourceTree = "<group>";
+		};
 		78AF3CAC1D3B7A96006BDB30 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +135,7 @@
 			children = (
 				78AF3CB81D3B7A96006BDB30 /* AppDelegate.swift */,
 				78AF3CBA1D3B7A96006BDB30 /* ViewController.swift */,
+				7823611A1D477F220064BE08 /* RoundHTTPHelper */,
 				78AF3CBC1D3B7A96006BDB30 /* Main.storyboard */,
 				78AF3CBF1D3B7A96006BDB30 /* Assets.xcassets */,
 				78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */,

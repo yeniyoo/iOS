@@ -41,10 +41,12 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
     // Facebook login
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+       
         if error == nil
         {
-            print("login complete")
-            self.performSegueWithIdentifier("showNew", sender: self)
+        //로그인 성공시 서버에 정보를 보낸다
+        result.
+        
         }
         else
         {
