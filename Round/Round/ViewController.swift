@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Alamofire
 
 class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
 
@@ -45,7 +46,7 @@ class ViewController: UIViewController ,FBSDKLoginButtonDelegate{
         if error == nil
         {
         //로그인 성공시 서버에 정보를 보낸다
-        result.
+        //result.
         
         }
         else
