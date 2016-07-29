@@ -22,6 +22,7 @@
 		78AF3CD91D3B7A97006BDB30 /* RoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CD81D3B7A97006BDB30 /* RoundUITests.swift */; };
 		9634C9591D4B1CDD0008842E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9634C9541D4B1CDC0008842E /* FBSDKShareKit.framework */; };
 		9634C95A1D4B1CDD0008842E /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9634C9551D4B1CDC0008842E /* FBSDKMessengerShareKit.framework */; };
+		96CE19691D4B257000C275B1 /* AgeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CE19681D4B257000C275B1 /* AgeSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		9634C9561D4B1CDC0008842E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		9634C9571D4B1CDD0008842E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		9634C9581D4B1CDD0008842E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		96CE19681D4B257000C275B1 /* AgeSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgeSelectView.swift; sourceTree = "<group>"; };
 		BADD2EC97ECF1E008C420A70 /* Pods-RoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoundUITests/Pods-RoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				78AF3CBF1D3B7A96006BDB30 /* Assets.xcassets */,
 				78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */,
 				78AF3CC41D3B7A96006BDB30 /* Info.plist */,
+				96CE19681D4B257000C275B1 /* AgeSelectView.swift */,
 			);
 			path = Round;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CE19691D4B257000C275B1 /* AgeSelectView.swift in Sources */,
 				78AF3CBB1D3B7A96006BDB30 /* ViewController.swift in Sources */,
 				78AF3CB91D3B7A96006BDB30 /* AppDelegate.swift in Sources */,
 			);

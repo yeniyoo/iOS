@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="KAG-EE-DwP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -37,17 +38,15 @@
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <segue destination="KAG-EE-DwP" kind="presentation" identifier="showNew" id="BJB-jK-RgF"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="357.75" y="195.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Age Select View-->
         <scene sceneID="0uX-wI-IqB">
             <objects>
-                <viewController id="KAG-EE-DwP" sceneMemberID="viewController">
+                <viewController id="KAG-EE-DwP" customClass="AgeSelectView" customModule="Round" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Gd-uR-iO0"/>
                         <viewControllerLayoutGuide type="bottom" id="Ei8-um-sdR"/>
@@ -56,25 +55,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-bo-BVL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHW-bo-BVL">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="152" y="323" width="63" height="21"/>
-                                </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZv-tw-gml">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="나이 선택"/>
+                                <connections>
+                                    <action selector="tapButton:" destination="KAG-EE-DwP" eventType="touchUpInside" id="r7x-kM-RsO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cHW-bo-BVL" firstAttribute="trailing" secondItem="BZv-tw-gml" secondAttribute="trailing" id="Mvb-3k-Oi8"/>
+                            <constraint firstItem="BZv-tw-gml" firstAttribute="centerX" secondItem="csC-GU-Znm" secondAttribute="centerX" id="VIw-dw-pIX"/>
+                            <constraint firstItem="BZv-tw-gml" firstAttribute="top" secondItem="cHW-bo-BVL" secondAttribute="bottom" constant="93" id="a0l-xh-Ef4"/>
+                            <constraint firstItem="BZv-tw-gml" firstAttribute="leading" secondItem="csC-GU-Znm" secondAttribute="leadingMargin" constant="4" id="hCT-lJ-fUq"/>
+                            <constraint firstItem="Ei8-um-sdR" firstAttribute="top" secondItem="BZv-tw-gml" secondAttribute="bottom" constant="200" id="qcB-pO-Tlu"/>
+                            <constraint firstItem="cHW-bo-BVL" firstAttribute="leading" secondItem="BZv-tw-gml" secondAttribute="leading" id="rFk-Gk-uZ2"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="cHW-bo-BVL"/>
+                                <exclude reference="BZv-tw-gml"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Mvb-3k-Oi8"/>
+                                <exclude reference="rFk-Gk-uZ2"/>
+                                <exclude reference="VIw-dw-pIX"/>
+                                <exclude reference="a0l-xh-Ef4"/>
+                                <exclude reference="hCT-lJ-fUq"/>
+                                <exclude reference="qcB-pO-Tlu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="cHW-bo-BVL"/>
+                                <include reference="BZv-tw-gml"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Mvb-3k-Oi8"/>
+                                <include reference="rFk-Gk-uZ2"/>
+                                <include reference="VIw-dw-pIX"/>
+                                <include reference="a0l-xh-Ef4"/>
+                                <include reference="hCT-lJ-fUq"/>
+                                <include reference="qcB-pO-Tlu"/>
                             </mask>
                         </variation>
                     </view>
@@ -82,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DET-wC-ruA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="945.75" y="187.5"/>
+            <point key="canvasLocation" x="1031.25" y="195.5"/>
         </scene>
     </scenes>
 </document>
