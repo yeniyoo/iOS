@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Round" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="Round" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -44,10 +44,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="0uX-wI-IqB">
             <objects>
-                <viewController id="KAG-EE-DwP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAG-EE-DwP" customClass="MainViewController" customModule="Round" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Gd-uR-iO0"/>
                         <viewControllerLayoutGuide type="bottom" id="Ei8-um-sdR"/>
@@ -67,6 +67,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="cHW-bo-BVL"/>
@@ -77,12 +78,42 @@
                                 <include reference="cHW-bo-BVL"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="IHw-t7-twS" appends="YES" id="wxH-Uf-2ZE"/>
+                            <outletCollection property="gestureRecognizers" destination="21V-zv-pUa" appends="YES" id="qxa-II-gNI"/>
+                            <outletCollection property="gestureRecognizers" destination="t1q-mr-5CG" appends="YES" id="8s4-9g-bP6"/>
+                            <outletCollection property="gestureRecognizers" destination="lGU-vs-VUg" appends="YES" id="9jT-ON-agm"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DET-wC-ruA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="IHw-t7-twS" userLabel="rightSwipe Recognizer">
+                    <connections>
+                        <action selector="swipeAction:" destination="KAG-EE-DwP" id="GJV-wp-9l4"/>
+                        <outlet property="delegate" destination="csC-GU-Znm" id="JZd-fA-hK3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="21V-zv-pUa" userLabel="leftSwipe Recognizer">
+                    <connections>
+                        <action selector="swipeAction:" destination="KAG-EE-DwP" id="SVq-a1-Zlu"/>
+                        <outlet property="delegate" destination="csC-GU-Znm" id="ZHD-v8-Ui1"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="t1q-mr-5CG" userLabel="upSwipe Recognizer">
+                    <connections>
+                        <action selector="swipeAction:" destination="KAG-EE-DwP" id="ulp-L5-wt7"/>
+                        <outlet property="delegate" destination="csC-GU-Znm" id="pFt-vd-3f2"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="lGU-vs-VUg" userLabel="downSwipe Recognizer">
+                    <connections>
+                        <action selector="swipeAction:" destination="KAG-EE-DwP" id="cBh-ln-fHu"/>
+                        <outlet property="delegate" destination="csC-GU-Znm" id="YhZ-kO-r3B"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="945.75" y="187.5"/>
+            <point key="canvasLocation" x="767.5" y="232.5"/>
         </scene>
     </scenes>
 </document>
