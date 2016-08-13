@@ -48,6 +48,8 @@ class RoundHTTPManager {
                 .validate()
                 .responseString(completionHandler: { (response) in
                     
+                    debugPrint(response)
+                    
                     switch response.result {
                     
                     case .Success:

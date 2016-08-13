@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JIb-QW-Lpp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Round-->
+        <scene sceneID="Kzq-SB-whm">
+            <objects>
+                <tableViewController id="JIb-QW-Lpp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="yej-3G-8sh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="izW-xb-28q">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="P3K-Zg-Mpx">
+                                    <rect key="frame" x="-60" y="-14" width="121" height="29"/>
+                                    <segments>
+                                        <segment title="내가 연 라운드"/>
+                                        <segment title="참여한 라운드"/>
+                                    </segments>
+                                    <color key="tintColor" red="0.9882352941176471" green="0.30588235294117649" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="P3K-Zg-Mpx" firstAttribute="centerY" secondItem="izW-xb-28q" secondAttribute="centerY" id="P6h-mp-j0X"/>
+                                <constraint firstItem="P3K-Zg-Mpx" firstAttribute="leading" secondItem="izW-xb-28q" secondAttribute="leading" constant="8" id="cbt-xc-o6Y"/>
+                                <constraint firstAttribute="trailing" secondItem="P3K-Zg-Mpx" secondAttribute="trailing" constant="8" id="lJD-Vn-B97"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="subviews">
+                                    <exclude reference="P3K-Zg-Mpx"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <exclude reference="P6h-mp-j0X"/>
+                                    <exclude reference="cbt-xc-o6Y"/>
+                                    <exclude reference="lJD-Vn-B97"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="subviews">
+                                    <include reference="P3K-Zg-Mpx"/>
+                                </mask>
+                                <mask key="constraints">
+                                    <include reference="P6h-mp-j0X"/>
+                                    <include reference="cbt-xc-o6Y"/>
+                                    <include reference="lJD-Vn-B97"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="y3g-Kn-ayT">
+                                <rect key="frame" x="0.0" y="156" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y3g-Kn-ayT" id="fDM-qW-Win">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제에ㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔㅔ목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfp-hU-3SK">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="2016년 8월 18일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2g-9Y-TDh">
+                                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bfp-hU-3SK" firstAttribute="leading" secondItem="fDM-qW-Win" secondAttribute="leadingMargin" constant="8" id="Dyq-sm-hW7"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bfp-hU-3SK" secondAttribute="trailing" constant="8" id="FEo-2Y-gjQ"/>
+                                        <constraint firstItem="p2g-9Y-TDh" firstAttribute="leading" secondItem="fDM-qW-Win" secondAttribute="leadingMargin" constant="8" id="eJD-0q-UeA"/>
+                                        <constraint firstItem="p2g-9Y-TDh" firstAttribute="top" secondItem="bfp-hU-3SK" secondAttribute="bottom" constant="1" id="kXQ-mX-o4L"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="p2g-9Y-TDh" secondAttribute="bottom" constant="0.5" id="lgy-Wb-ENG"/>
+                                        <constraint firstItem="bfp-hU-3SK" firstAttribute="top" secondItem="fDM-qW-Win" secondAttribute="topMargin" id="ttz-IX-yii"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="bfp-hU-3SK"/>
+                                            <exclude reference="p2g-9Y-TDh"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="Dyq-sm-hW7"/>
+                                            <exclude reference="FEo-2Y-gjQ"/>
+                                            <exclude reference="ttz-IX-yii"/>
+                                            <exclude reference="eJD-0q-UeA"/>
+                                            <exclude reference="kXQ-mX-o4L"/>
+                                            <exclude reference="lgy-Wb-ENG"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="bfp-hU-3SK"/>
+                                            <include reference="p2g-9Y-TDh"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="Dyq-sm-hW7"/>
+                                            <include reference="FEo-2Y-gjQ"/>
+                                            <include reference="ttz-IX-yii"/>
+                                            <include reference="eJD-0q-UeA"/>
+                                            <include reference="kXQ-mX-o4L"/>
+                                            <include reference="lgy-Wb-ENG"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="JIb-QW-Lpp" id="68x-dA-FB7"/>
+                            <outlet property="delegate" destination="JIb-QW-Lpp" id="kJN-xu-P6E"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="My Round" id="DRl-cR-HTc"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5W8-so-bGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1742.25" y="534.5"/>
+        </scene>
+    </scenes>
+</document>
