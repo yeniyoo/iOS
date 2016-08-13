@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XDw-Tj-Qkn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profle-->
+        <scene sceneID="hZn-ne-lqa">
+            <objects>
+                <viewController id="XDw-Tj-Qkn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iqt-Oa-ADi"/>
+                        <viewControllerLayoutGuide type="bottom" id="nZJ-UH-icf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1IA-U2-zGP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gij-CT-VZT">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Round" id="jV9-lV-YSq"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDu-M5-jrR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="jDu-M5-jrR" firstAttribute="top" secondItem="1IA-U2-zGP" secondAttribute="top" constant="295" id="1r2-ea-4OX"/>
+                            <constraint firstItem="Gij-CT-VZT" firstAttribute="leading" secondItem="1IA-U2-zGP" secondAttribute="leading" id="FlM-zA-eHn"/>
+                            <constraint firstItem="jDu-M5-jrR" firstAttribute="leading" secondItem="1IA-U2-zGP" secondAttribute="leadingMargin" constant="4" id="bCQ-hl-e1H"/>
+                            <constraint firstItem="nZJ-UH-icf" firstAttribute="top" secondItem="jDu-M5-jrR" secondAttribute="bottom" constant="176" id="gss-aP-BPb"/>
+                            <constraint firstItem="Gij-CT-VZT" firstAttribute="top" secondItem="1IA-U2-zGP" secondAttribute="top" id="kce-ei-19a"/>
+                            <constraint firstItem="jDu-M5-jrR" firstAttribute="centerX" secondItem="1IA-U2-zGP" secondAttribute="centerX" id="u6I-QI-sbR"/>
+                            <constraint firstItem="jDu-M5-jrR" firstAttribute="centerX" secondItem="Gij-CT-VZT" secondAttribute="centerX" id="zNq-9Y-8Ug"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Gij-CT-VZT"/>
+                                <exclude reference="jDu-M5-jrR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="FlM-zA-eHn"/>
+                                <exclude reference="kce-ei-19a"/>
+                                <exclude reference="gss-aP-BPb"/>
+                                <exclude reference="1r2-ea-4OX"/>
+                                <exclude reference="bCQ-hl-e1H"/>
+                                <exclude reference="u6I-QI-sbR"/>
+                                <exclude reference="zNq-9Y-8Ug"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Gij-CT-VZT"/>
+                                <include reference="jDu-M5-jrR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="FlM-zA-eHn"/>
+                                <include reference="kce-ei-19a"/>
+                                <include reference="gss-aP-BPb"/>
+                                <include reference="1r2-ea-4OX"/>
+                                <include reference="bCQ-hl-e1H"/>
+                                <include reference="u6I-QI-sbR"/>
+                                <include reference="zNq-9Y-8Ug"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profle" id="qyD-pl-n9f"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6As-Xw-s7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1694.25" y="-608.5"/>
+        </scene>
+    </scenes>
+</document>

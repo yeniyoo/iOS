@@ -14,7 +14,6 @@
 		780AD49B1D47BAC1009DC2EB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780AD4971D47BAC1009DC2EB /* FBSDKCoreKit.framework */; };
 		780AD49C1D47BAC1009DC2EB /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780AD4981D47BAC1009DC2EB /* FBSDKLoginKit.framework */; };
 		780AD49D1D47BAC1009DC2EB /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780AD4991D47BAC1009DC2EB /* FBSDKShareKit.framework */; };
-		789568361D489672004FD325 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 789568351D489672004FD325 /* AccountKit.framework */; };
 		7895683B1D4A1F69004FD325 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895683A1D4A1F69004FD325 /* MainViewController.swift */; };
 		7895683D1D4A2054004FD325 /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7895683C1D4A2054004FD325 /* Round.swift */; };
 		78AF3CB91D3B7A96006BDB30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CB81D3B7A96006BDB30 /* AppDelegate.swift */; };
@@ -26,6 +25,10 @@
 		78AF3CD91D3B7A97006BDB30 /* RoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CD81D3B7A97006BDB30 /* RoundUITests.swift */; };
 		96DA39BD1D5EE81800216433 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA39BC1D5EE81800216433 /* AccountKit.framework */; };
 		96DA39C01D5EEDBF00216433 /* OpenRound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DA39BE1D5EEDBF00216433 /* OpenRound.storyboard */; };
+		96EF8B891D5EFB630027D7C3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EF8B871D5EFB630027D7C3 /* Home.storyboard */; };
+		96EF8B8B1D5EFB9E0027D7C3 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EF8B8A1D5EFB9E0027D7C3 /* AccountKit.framework */; };
+		96EF8B8D1D5EFD0A0027D7C3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EF8B8C1D5EFD0A0027D7C3 /* Profile.storyboard */; };
+		96EF8B8F1D5F07020027D7C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF8B8E1D5F07020027D7C3 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +61,6 @@
 		780AD4971D47BAC1009DC2EB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		780AD4981D47BAC1009DC2EB /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		780AD4991D47BAC1009DC2EB /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		789568351D489672004FD325 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		7895683A1D4A1F69004FD325 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		7895683C1D4A2054004FD325 /* Round.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
 		78AF3CB51D3B7A96006BDB30 /* Round.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Round.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,10 @@
 		78AF3CDA1D3B7A97006BDB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96DA39BC1D5EE81800216433 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		96DA39BF1D5EEDBF00216433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OpenRound.storyboard; sourceTree = "<group>"; };
+		96EF8B881D5EFB630027D7C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
+		96EF8B8A1D5EFB9E0027D7C3 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		96EF8B8C1D5EFD0A0027D7C3 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		96EF8B8E1D5F07020027D7C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BADD2EC97ECF1E008C420A70 /* Pods-RoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoundUITests/Pods-RoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,9 +92,9 @@
 			files = (
 				242EA800762FBC999CEBA614 /* Pods_Round.framework in Frameworks */,
 				780AD49B1D47BAC1009DC2EB /* FBSDKCoreKit.framework in Frameworks */,
+				96EF8B8B1D5EFB9E0027D7C3 /* AccountKit.framework in Frameworks */,
 				96DA39BD1D5EE81800216433 /* AccountKit.framework in Frameworks */,
 				780AD49D1D47BAC1009DC2EB /* FBSDKShareKit.framework in Frameworks */,
-				789568361D489672004FD325 /* AccountKit.framework in Frameworks */,
 				780AD49C1D47BAC1009DC2EB /* FBSDKLoginKit.framework in Frameworks */,
 				780AD49A1D47BAC1009DC2EB /* Bolts.framework in Frameworks */,
 			);
@@ -143,10 +149,13 @@
 				7895683A1D4A1F69004FD325 /* MainViewController.swift */,
 				78B125671D5EEEE100107D1A /* model */,
 				78AF3CBC1D3B7A96006BDB30 /* Main.storyboard */,
+				96EF8B8C1D5EFD0A0027D7C3 /* Profile.storyboard */,
 				96DA39BE1D5EEDBF00216433 /* OpenRound.storyboard */,
+				96EF8B871D5EFB630027D7C3 /* Home.storyboard */,
 				78AF3CBF1D3B7A96006BDB30 /* Assets.xcassets */,
 				78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */,
 				78AF3CC41D3B7A96006BDB30 /* Info.plist */,
+				96EF8B8E1D5F07020027D7C3 /* HomeViewController.swift */,
 			);
 			path = Round;
 			sourceTree = "<group>";
@@ -193,8 +202,8 @@
 		D51411C8D275F5ACEA2AE8EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96EF8B8A1D5EFB9E0027D7C3 /* AccountKit.framework */,
 				96DA39BC1D5EE81800216433 /* AccountKit.framework */,
-				789568351D489672004FD325 /* AccountKit.framework */,
 				780AD4961D47BAC1009DC2EB /* Bolts.framework */,
 				780AD4971D47BAC1009DC2EB /* FBSDKCoreKit.framework */,
 				780AD4981D47BAC1009DC2EB /* FBSDKLoginKit.framework */,
@@ -319,7 +328,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EF8B8D1D5EFD0A0027D7C3 /* Profile.storyboard in Resources */,
 				78AF3CC31D3B7A96006BDB30 /* LaunchScreen.storyboard in Resources */,
+				96EF8B891D5EFB630027D7C3 /* Home.storyboard in Resources */,
 				96DA39C01D5EEDBF00216433 /* OpenRound.storyboard in Resources */,
 				78AF3CC01D3B7A96006BDB30 /* Assets.xcassets in Resources */,
 				78AF3CBE1D3B7A96006BDB30 /* Main.storyboard in Resources */,
@@ -470,6 +481,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EF8B8F1D5F07020027D7C3 /* HomeViewController.swift in Sources */,
 				7895683B1D4A1F69004FD325 /* MainViewController.swift in Sources */,
 				78AF3CBB1D3B7A96006BDB30 /* LogInViewController.swift in Sources */,
 				7895683D1D4A2054004FD325 /* Round.swift in Sources */,
@@ -531,6 +543,14 @@
 				96DA39BF1D5EEDBF00216433 /* Base */,
 			);
 			name = OpenRound.storyboard;
+			sourceTree = "<group>";
+		};
+		96EF8B871D5EFB630027D7C3 /* Home.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96EF8B881D5EFB630027D7C3 /* Base */,
+			);
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
