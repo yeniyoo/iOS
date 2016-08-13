@@ -24,6 +24,8 @@
 		78AF3CC31D3B7A96006BDB30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */; };
 		78AF3CCE1D3B7A97006BDB30 /* RoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CCD1D3B7A97006BDB30 /* RoundTests.swift */; };
 		78AF3CD91D3B7A97006BDB30 /* RoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CD81D3B7A97006BDB30 /* RoundUITests.swift */; };
+		96DA39BD1D5EE81800216433 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA39BC1D5EE81800216433 /* AccountKit.framework */; };
+		96DA39C01D5EEDBF00216433 /* OpenRound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DA39BE1D5EEDBF00216433 /* OpenRound.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		78AF3CD41D3B7A97006BDB30 /* RoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF3CD81D3B7A97006BDB30 /* RoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUITests.swift; sourceTree = "<group>"; };
 		78AF3CDA1D3B7A97006BDB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96DA39BC1D5EE81800216433 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		96DA39BF1D5EEDBF00216433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OpenRound.storyboard; sourceTree = "<group>"; };
 		BADD2EC97ECF1E008C420A70 /* Pods-RoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoundUITests/Pods-RoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +86,7 @@
 			files = (
 				242EA800762FBC999CEBA614 /* Pods_Round.framework in Frameworks */,
 				780AD49B1D47BAC1009DC2EB /* FBSDKCoreKit.framework in Frameworks */,
+				96DA39BD1D5EE81800216433 /* AccountKit.framework in Frameworks */,
 				780AD49D1D47BAC1009DC2EB /* FBSDKShareKit.framework in Frameworks */,
 				789568361D489672004FD325 /* AccountKit.framework in Frameworks */,
 				780AD49C1D47BAC1009DC2EB /* FBSDKLoginKit.framework in Frameworks */,
@@ -138,6 +143,7 @@
 				7895683A1D4A1F69004FD325 /* MainViewController.swift */,
 				7895683C1D4A2054004FD325 /* Round.swift */,
 				78AF3CBC1D3B7A96006BDB30 /* Main.storyboard */,
+				96DA39BE1D5EEDBF00216433 /* OpenRound.storyboard */,
 				78AF3CBF1D3B7A96006BDB30 /* Assets.xcassets */,
 				78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */,
 				78AF3CC41D3B7A96006BDB30 /* Info.plist */,
@@ -179,6 +185,7 @@
 		D51411C8D275F5ACEA2AE8EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				96DA39BC1D5EE81800216433 /* AccountKit.framework */,
 				789568351D489672004FD325 /* AccountKit.framework */,
 				780AD4961D47BAC1009DC2EB /* Bolts.framework */,
 				780AD4971D47BAC1009DC2EB /* FBSDKCoreKit.framework */,
@@ -267,6 +274,7 @@
 				TargetAttributes = {
 					78AF3CB41D3B7A96006BDB30 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XM596G3X3G;
 					};
 					78AF3CC81D3B7A97006BDB30 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -304,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78AF3CC31D3B7A96006BDB30 /* LaunchScreen.storyboard in Resources */,
+				96DA39C01D5EEDBF00216433 /* OpenRound.storyboard in Resources */,
 				78AF3CC01D3B7A96006BDB30 /* Assets.xcassets in Resources */,
 				78AF3CBE1D3B7A96006BDB30 /* Main.storyboard in Resources */,
 			);
@@ -508,6 +517,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		96DA39BE1D5EEDBF00216433 /* OpenRound.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96DA39BF1D5EEDBF00216433 /* Base */,
+			);
+			name = OpenRound.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -599,6 +616,8 @@
 			baseConfigurationReference = 6A27DFC50F9AAD8F6538B8CF /* Pods-Round.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -607,6 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nexters.yeniyoo.Round;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -615,6 +635,8 @@
 			baseConfigurationReference = 2D3E77E4E5786C512BB66AC9 /* Pods-Round.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -623,6 +645,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nexters.yeniyoo.Round;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
