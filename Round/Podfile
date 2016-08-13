@@ -7,6 +7,9 @@ target 'Round' do
 
   # Pods for Round
   pod 'Alamofire', '~> 3.4'
+  pod 'ReactiveCocoa', '~> 4.2' # FRP 사용 위함
+  pod 'AlamofireObjectMapper', '~> 3.0' #응답을 쉽게 스위프트 객체로 매핑하기 위한 도구.
+  
   target 'RoundTests' do
     inherit! :search_paths
     # Pods for testing

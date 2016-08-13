@@ -136,7 +136,7 @@
 				78AF3CB81D3B7A96006BDB30 /* AppDelegate.swift */,
 				78AF3CBA1D3B7A96006BDB30 /* LogInViewController.swift */,
 				7895683A1D4A1F69004FD325 /* MainViewController.swift */,
-				7895683C1D4A2054004FD325 /* Round.swift */,
+				78B125671D5EEEE100107D1A /* model */,
 				78AF3CBC1D3B7A96006BDB30 /* Main.storyboard */,
 				78AF3CBF1D3B7A96006BDB30 /* Assets.xcassets */,
 				78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */,
@@ -161,6 +161,14 @@
 				78AF3CDA1D3B7A97006BDB30 /* Info.plist */,
 			);
 			path = RoundUITests;
+			sourceTree = "<group>";
+		};
+		78B125671D5EEEE100107D1A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				7895683C1D4A2054004FD325 /* Round.swift */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 		BAE716AD3AFC2561924301F5 /* Pods */ = {
