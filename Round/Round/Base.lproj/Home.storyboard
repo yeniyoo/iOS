@@ -10,7 +10,7 @@
         <!--Home-->
         <scene sceneID="0uX-wI-IqB">
             <objects>
-                <viewController storyboardIdentifier="mainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAG-EE-DwP" customClass="HomeViewController" customModule="Round" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainViewController" title="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAG-EE-DwP" customClass="HomeViewController" customModule="Round" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4Gd-uR-iO0"/>
                         <viewControllerLayoutGuide type="bottom" id="Ei8-um-sdR"/>
