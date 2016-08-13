@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -84,12 +85,12 @@
                                 <exclude reference="BZv-tw-gml"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Mvb-3k-Oi8"/>
-                                <exclude reference="rFk-Gk-uZ2"/>
+                                <exclude reference="qcB-pO-Tlu"/>
                                 <exclude reference="VIw-dw-pIX"/>
                                 <exclude reference="a0l-xh-Ef4"/>
                                 <exclude reference="hCT-lJ-fUq"/>
-                                <exclude reference="qcB-pO-Tlu"/>
+                                <exclude reference="Mvb-3k-Oi8"/>
+                                <exclude reference="rFk-Gk-uZ2"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -98,12 +99,12 @@
                                 <include reference="BZv-tw-gml"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Mvb-3k-Oi8"/>
-                                <include reference="rFk-Gk-uZ2"/>
+                                <include reference="qcB-pO-Tlu"/>
                                 <include reference="VIw-dw-pIX"/>
                                 <include reference="a0l-xh-Ef4"/>
                                 <include reference="hCT-lJ-fUq"/>
-                                <include reference="qcB-pO-Tlu"/>
+                                <include reference="Mvb-3k-Oi8"/>
+                                <include reference="rFk-Gk-uZ2"/>
                             </mask>
                         </variation>
                     </view>
