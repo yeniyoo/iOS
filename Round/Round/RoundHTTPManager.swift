@@ -26,7 +26,7 @@ import SwiftyJSON
 
 class RoundHTTPManager {
     //서버 주소
-    let baseurl = "http://f8d9cee0.ngrok.io/api/" //"http://df2ed8b2.ngrok.io/api/"   //"http://yeround.mooo.com/api/"
+    let baseurl = "http://f8d9cee0.ngrok.io/api" //"http://df2ed8b2.ngrok.io/api/"   //"http://yeround.mooo.com/api/"
     var loginToken = "" //로그인 혹은 유저 인증이 필요한 경우 사용하는 토큰
     //필요할 때만 생성한다
     //나름 싱글톤...?
@@ -40,7 +40,7 @@ class RoundHTTPManager {
     func racFaceBookLogin(access_token : String) -> SignalProducer<Bool, NSError>{
         return SignalProducer {
             (observer, error) in
-            let loginURL = "users/facebook-auth"
+            let loginURL = "/users/facebook-auth"
             let url = self.baseurl + loginURL
             let param = ["access_token" : access_token]
             
@@ -85,7 +85,7 @@ class RoundHTTPManager {
     func racSetUserAge(age : Int) -> SignalProducer<AnyObject, NSError>{
         return SignalProducer { observer, error in
     
-            let setAgeURL = "users"
+            let setAgeURL = "/users"
             
             let url = self.baseurl + setAgeURL
             let headers = ["Authorization" : self.loginToken]
@@ -136,7 +136,7 @@ class RoundHTTPManager {
         return SignalProducer {
             observer, error in
             
-            let getBackgroundUrl = "background-image"
+            let getBackgroundUrl = "/background-image"
             
             let url = self.baseurl + getBackgroundUrl
             
@@ -189,7 +189,7 @@ class RoundHTTPManager {
         return SignalProducer {
               observer, error in
 
-            let getRoundURL = "rounds"
+            let getRoundURL = "/rounds"
             
             let url = self.baseurl + getRoundURL
             
@@ -224,7 +224,7 @@ class RoundHTTPManager {
             let headers = ["Authorization" : self.loginToken]
             let param : [String : AnyObject] = ["question" : question,
                 "background_id" : background_id]
-            let openRoundURL = "rounds"
+            let openRoundURL = "/rounds"
             
             let url = self.baseurl + openRoundURL
             
@@ -268,5 +268,68 @@ class RoundHTTPManager {
         }
     }
     
+    
+    //MARK: 라운드 결과 선택
+    func racPick(round_id : Int, yes_no : Bool) ->SignalProducer<AnyObject, NSError>{
+        
+        return SignalProducer {
+            observer, error in
+            
+        let pickURL = "/picks"
+        
+        let url = self.baseurl + pickURL
+        
+        let headers = ["Authorization" : self.loginToken]
+        let param : [String : AnyObject] = ["round_id" : round_id,
+                                            "yes_no" : yes_no]
+        
+        Alamofire.request(.POST, url, parameters: param, headers : headers)
+        .validate()
+        .responseString { (response) in
+            
+            switch response.result {
+            case .Success :
+                //이 이후에는 더 이상 넘길 인자가 없으므로 그냥 completed로
+                observer.sendCompleted()
+            case .Failure(let error) :
+                observer.sendFailed(error)
+            }
+        }
+        }
+    }
+    
+    //MARK: 유저가 참여한 라운드 리스트
+    func racPickedRoundList() -> SignalProducer<[AnsweredRound], NSError> {
+        
+        return SignalProducer {
+            observer, error in
+            
+            let pickURL = "/picks"
+            
+            let url = self.baseurl + pickURL
+            
+            let headers = ["Authorization" : self.loginToken]
+            Alamofire.request(.GET, url, headers : headers)
+                .validate()
+                .responseArray() { (response : Response<[AnsweredRound], NSError>) in
+                    
+                    switch response.result {
+                    case .Success :
+                        
+                        if let list = response.result.value {
+                        observer.sendNext(list)
+                        observer.sendCompleted()
+                        }
+                        else {
+                            let error = NSError(domain: "cannot parsr to [AnsweredRound]", code: 101, userInfo: nil)
+                            observer.sendFailed(error)
+                        }
+                    case .Failure(let error) :
+                        observer.sendFailed(error)
+                    }
+            }
+        }
+
+    }
     
 }

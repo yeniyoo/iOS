@@ -9,8 +9,9 @@
 import Foundation
 import ObjectMapper
 
-
-//라운드를 저장하는 객체. 라운드에 대한 정보를 가지고 있다.
+/*
+라운드를 저장하는 객체. 라운드에 대한 정보를 가지고 있다.
+ */
 class Round :  Mappable {
     
     dynamic var question = ""
