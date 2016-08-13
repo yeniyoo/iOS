@@ -29,6 +29,7 @@
 		96EF8B8B1D5EFB9E0027D7C3 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EF8B8A1D5EFB9E0027D7C3 /* AccountKit.framework */; };
 		96EF8B8D1D5EFD0A0027D7C3 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96EF8B8C1D5EFD0A0027D7C3 /* Profile.storyboard */; };
 		96EF8B8F1D5F07020027D7C3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EF8B8E1D5F07020027D7C3 /* HomeViewController.swift */; };
+		96EFBBF91D5F0EC70047AC1A /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EFBBF81D5F0EC70047AC1A /* WriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		96EF8B8A1D5EFB9E0027D7C3 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		96EF8B8C1D5EFD0A0027D7C3 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		96EF8B8E1D5F07020027D7C3 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		96EFBBF81D5F0EC70047AC1A /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		BADD2EC97ECF1E008C420A70 /* Pods-RoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoundUITests/Pods-RoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 				78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */,
 				78AF3CC41D3B7A96006BDB30 /* Info.plist */,
 				96EF8B8E1D5F07020027D7C3 /* HomeViewController.swift */,
+				96EFBBF81D5F0EC70047AC1A /* WriteViewController.swift */,
 			);
 			path = Round;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96EFBBF91D5F0EC70047AC1A /* WriteViewController.swift in Sources */,
 				96EF8B8F1D5F07020027D7C3 /* HomeViewController.swift in Sources */,
 				7895683B1D4A1F69004FD325 /* MainViewController.swift in Sources */,
 				78AF3CBB1D3B7A96006BDB30 /* LogInViewController.swift in Sources */,
