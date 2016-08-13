@@ -30,6 +30,19 @@ class WriteViewController: UIViewController, UITextViewDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WriteViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
+    @IBAction func xButtonTapped(sender: AnyObject) {
+        print("x")
+    }
+    @IBAction func OKButtonTapped(sender: AnyObject) {
+        print("ok")
+    }
+    
+    
+    @IBAction func changeBackgroundButton(sender: AnyObject) {
+        print("background")
+    }
+    
+    
     
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.

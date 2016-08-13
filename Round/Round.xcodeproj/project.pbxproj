@@ -294,7 +294,6 @@
 				TargetAttributes = {
 					78AF3CB41D3B7A96006BDB30 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = XM596G3X3G;
 					};
 					78AF3CC81D3B7A97006BDB30 = {
 						CreatedOnToolsVersion = 7.3.1;
