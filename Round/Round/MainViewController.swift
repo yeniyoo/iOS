@@ -21,14 +21,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func swipeAction(sender: UISwipeGestureRecognizer) {
         
         switch sender.direction {
-            
-        
-            //좌우 - 예, 아니오 선택
-        case UISwipeGestureRecognizerDirection.Right :
-            print("right")
-        case UISwipeGestureRecognizerDirection.Left :
-            print("left")
-            
+
             
             //상하 - 새로운 카드 가져오기
         case UISwipeGestureRecognizerDirection.Up :

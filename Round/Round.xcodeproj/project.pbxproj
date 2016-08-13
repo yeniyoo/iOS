@@ -24,7 +24,7 @@
 		78AF3CC31D3B7A96006BDB30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78AF3CC11D3B7A96006BDB30 /* LaunchScreen.storyboard */; };
 		78AF3CCE1D3B7A97006BDB30 /* RoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CCD1D3B7A97006BDB30 /* RoundTests.swift */; };
 		78AF3CD91D3B7A97006BDB30 /* RoundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AF3CD81D3B7A97006BDB30 /* RoundUITests.swift */; };
-		96DA39BD1D5EE81800216433 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA39BC1D5EE81800216433 /* AccountKit.framework */; };
+		78B125691D5EFA1500107D1A /* RoundHTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B125681D5EFA1500107D1A /* RoundHTTPManager.swift */; };
 		96DA39C01D5EEDBF00216433 /* OpenRound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DA39BE1D5EEDBF00216433 /* OpenRound.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -74,7 +74,7 @@
 		78AF3CD41D3B7A97006BDB30 /* RoundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AF3CD81D3B7A97006BDB30 /* RoundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundUITests.swift; sourceTree = "<group>"; };
 		78AF3CDA1D3B7A97006BDB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96DA39BC1D5EE81800216433 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
+		78B125681D5EFA1500107D1A /* RoundHTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundHTTPManager.swift; sourceTree = "<group>"; };
 		96DA39BF1D5EEDBF00216433 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/OpenRound.storyboard; sourceTree = "<group>"; };
 		BADD2EC97ECF1E008C420A70 /* Pods-RoundUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RoundUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RoundUITests/Pods-RoundUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +86,6 @@
 			files = (
 				242EA800762FBC999CEBA614 /* Pods_Round.framework in Frameworks */,
 				780AD49B1D47BAC1009DC2EB /* FBSDKCoreKit.framework in Frameworks */,
-				96DA39BD1D5EE81800216433 /* AccountKit.framework in Frameworks */,
 				780AD49D1D47BAC1009DC2EB /* FBSDKShareKit.framework in Frameworks */,
 				789568361D489672004FD325 /* AccountKit.framework in Frameworks */,
 				780AD49C1D47BAC1009DC2EB /* FBSDKLoginKit.framework in Frameworks */,
@@ -172,6 +171,7 @@
 		78B125671D5EEEE100107D1A /* model */ = {
 			isa = PBXGroup;
 			children = (
+				78B125681D5EFA1500107D1A /* RoundHTTPManager.swift */,
 				7895683C1D4A2054004FD325 /* Round.swift */,
 			);
 			name = model;
@@ -193,7 +193,6 @@
 		D51411C8D275F5ACEA2AE8EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				96DA39BC1D5EE81800216433 /* AccountKit.framework */,
 				789568351D489672004FD325 /* AccountKit.framework */,
 				780AD4961D47BAC1009DC2EB /* Bolts.framework */,
 				780AD4971D47BAC1009DC2EB /* FBSDKCoreKit.framework */,
@@ -282,7 +281,6 @@
 				TargetAttributes = {
 					78AF3CB41D3B7A96006BDB30 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = XM596G3X3G;
 					};
 					78AF3CC81D3B7A97006BDB30 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -473,6 +471,7 @@
 				7895683B1D4A1F69004FD325 /* MainViewController.swift in Sources */,
 				78AF3CBB1D3B7A96006BDB30 /* LogInViewController.swift in Sources */,
 				7895683D1D4A2054004FD325 /* Round.swift in Sources */,
+				78B125691D5EFA1500107D1A /* RoundHTTPManager.swift in Sources */,
 				78AF3CB91D3B7A96006BDB30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

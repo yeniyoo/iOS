@@ -9,7 +9,8 @@ target 'Round' do
   pod 'Alamofire', '~> 3.4'
   pod 'ReactiveCocoa', '~> 4.2' # FRP 사용 위함
   pod 'AlamofireObjectMapper', '~> 3.0' #응답을 쉽게 스위프트 객체로 매핑하기 위한 도구.
-  
+  pod 'SwiftyJSON', '~> 2.3' #JSON사용을 쉽게 하기 위함
+  pod 'RealmSwift' #쉽게 DB사용을 하기위한 프레임워크
   target 'RoundTests' do
     inherit! :search_paths
     # Pods for testing

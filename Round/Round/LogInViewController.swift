@@ -23,7 +23,7 @@ class LogInViewController: UIViewController ,FBSDKLoginButtonDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        //로그인이 되지 않았을 때만 로그인을 하는 페이지가 보이도록 한다.
+        //로그인이 되지 않았을 때만 로그인을 하는 버튼이 보이도록 한다.
         if (FBSDKAccessToken.currentAccessToken() == nil)
         {
             print("Not logged in..")
@@ -38,24 +38,7 @@ class LogInViewController: UIViewController ,FBSDKLoginButtonDelegate{
 
     
     override func viewDidAppear(animated: Bool) {
-        
-        
-        if (FBSDKAccessToken.currentAccessToken() == nil)
-        {
-            print("Not logged in..")
-        }
-        else
-        {
-            //로그인 되어 있는 경우는 바로 다음으로 넘어간다.
-            //메인 화면으로 넘어간다.
-            let mainViewCon = self.storyboard?.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
-            
-            //
-            self.presentViewController(mainViewCon, animated: true, completion: {
-                print("welcome to main")
-            })
-        }
-       
+        login(isNew:  false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -75,41 +58,28 @@ class LogInViewController: UIViewController ,FBSDKLoginButtonDelegate{
             let connection = FBSDKGraphRequestConnection()
             let param = ["fields" : "gender"] //성별을 받아온다.
             let req = FBSDKGraphRequest(graphPath: "me", parameters: param, HTTPMethod: "GET")
+            
+            //리퀘스트와 돌아 온 뒤 할 일을 추가한다.
             connection.addRequest(req, completionHandler: { (reqCon, result, error) in
                 
                 //JSON으로 온 결과를 사용할 수 있도록 딕셔너리로 파싱해준다.
                 let r = result as! [String : String]
                 
-                //가져온 사용자 정보를 저장한다. 나중에 필요하다면, 다른 Realm이라던가 이런 데 저장해주면 된다!
-                let ud = NSUserDefaults.standardUserDefaults()
-                ud.setObject(r["gender"] , forKey: "user_gender")
-                
-                
-                //메인 화면으로 넘어간다.
-                let mainViewCon = self.storyboard?.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
-                
-                //
-                self.presentViewController(mainViewCon, animated: true, completion: { 
-                    print("welcome to main")
-                })
-                
+            //가져온 사용자 정보를 저장한다. 나중에 필요하다면, 다른 Realm이라던가 이런 데 저장해주면 된다!
+            let ud = NSUserDefaults.standardUserDefaults()
+            ud.setObject(r["gender"] , forKey: "user_gender")
+            
+            //가져온 토큰으로 로그인을 시도한다.
+            self.login(isNew: true)
             })
+            
         
             connection.start()
             
         }
         else {
             //로그인 실패, 혹은 취소 시
-            let av = UIAlertController(title: "로그인 실패", message: "로그인이 취소 되었습니다.", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "확인", style: .Default, handler: { (action) in
-                av.dismissViewControllerAnimated(true, completion: {
-                })
-            })
-            av.addAction(action)
-            
-            self.presentViewController(av, animated: true, completion: { 
-                
-            })
+            loginFailed("로그인이 취소 되었습니다.")
         }
         
         
@@ -119,6 +89,81 @@ class LogInViewController: UIViewController ,FBSDKLoginButtonDelegate{
         print("user logged out")
     }
 
+    
+    //로그인 실패시 팝업 뷰를 띄워 준다.
+    func loginFailed(reason : String) {
+        let alert = UIAlertController(title: "로그인 실패", message: reason, preferredStyle: .Alert)
+        let action = UIAlertAction(title: "확인", style: .Cancel, handler: nil)
+        alert.addAction(action)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
 
+    //로그인을 시도한다.
+    func login(isNew isNew : Bool) {
+        
+        if let token = FBSDKAccessToken.currentAccessToken()
+        {
+            //페이스북 로그인 되어 있어 토큰이 있는 경우는 바로 라운드 서버에 로그인을 요청한다.
+            let tokenString = token.tokenString
+            let httpManager = RoundHTTPManager.sharedInstance
+            
+            httpManager.racFaceBookLogin(tokenString).startWithSignal({ (observer, disposable) in
+                observer.observeNext({ (result) in
+                    if result {
+                        //메인 화면으로 넘어간다.
+                        
+                        //새로 가입하는 것이라면 == 페이스북 로그인 버튼을 눌렀었다 라면 나이 설정을 한다..
+                        if isNew {
+                            let age = 20
+                            httpManager.racSetUserAge(age).startWithSignal({ (observer, disposable) in
+                                
+                                //성공시
+                                observer.observeCompleted({ 
+                                    let mainViewCon = self.storyboard?.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
+                                    
+                                    
+                                    self.presentViewController(mainViewCon, animated: true, completion: {
+                                        print("welcome to main")
+                                        
+                                    })
+                                })
+                                
+                                observer.observeFailed({ (error) in
+                                    
+                                    let alert = UIAlertController(title: "연령 설정 실패", message: "나이를 설정하는 데 실패했습니다.", preferredStyle: .Alert)
+                                    let action = UIAlertAction(title: "확인", style: .Cancel, handler: nil)
+                                    alert.addAction(action)
+                                    
+                                    self.presentViewController(alert, animated: true, completion: nil)
+                                })
+                                
+                            })
+                        }
+                        else {
+                        
+                            //아닌 경우 바로 넘어간다.
+                        let mainViewCon = self.storyboard?.instantiateViewControllerWithIdentifier("mainViewController") as! MainViewController
+                        
+                        
+                        self.presentViewController(mainViewCon, animated: true, completion: {
+                            print("welcome to main")
+                            
+                        })
+                        }
+                        
+                    }
+                    else {
+                        self.loginFailed("알 수 없는 이유로 로그인에 실패하였습니다. 문제가 지속되면 문의해주세요!")
+                    }
+                    
+                })
+                observer.observeFailed({ (error) in
+                    self.loginFailed(error.localizedDescription)
+                })
+            })
+        }
+
+    }
 }
 
